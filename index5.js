@@ -1,3 +1,23 @@
+        function sendEmail(name, email, message) {
+          // Make AJAX request (if using server-side script) or use third-party service API
+          fetch('/send-reminder', {
+            method: 'POST',
+            body: JSON.stringify({ name, email, message }),
+          })
+            .then(response => {
+              if (response.ok) {
+                console.log('Reminder sent successfully!');
+                // Show success message to user
+              } else {
+                console.error('Error sending reminder:', response.statusText);
+                // Show error message to user (e.g., "Failed to send reminder. Network error.")
+              }
+            })
+            .catch(error => {
+              console.error('Error:', error);
+              // Show generic error message (e.g., "An unexpected error occurred. Please try again later.")
+            });
+        }
         // Function to update the current time
         function updateCurrentTime() {
             const currentTimeElement = document.getElementById('currentTime');
