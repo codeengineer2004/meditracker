@@ -58,7 +58,7 @@ function setupAlarm(reminderTime, medicineName, userEmail) {
     if (timeDifference > 0) {
         setTimeout(() => {
             // Play alarm sound
-            const alarmSound = new Audio('https://github.com/codeengineer2004/meditracker/blob/main/alaram.wav'); // Path to your alarm sound file
+            const alarmSound = new Audio('alaram.wav'); // Path to your alarm sound file
             alarmSound.play();
 
             // Send reminder email
