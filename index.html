@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="with=device-didth, initial-scale=1.0">
+    <title>aspirants</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="picture1.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="header">
+
+      <nav id="list">
+        <a href="#" id=logo>
+        <img src="picture1.png" class="logo"></a>
+
+
+
+        <div class="navbar" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+
+
+            <li>
+              <a href="">HOME</a>
+            </li>
+            <li>
+              <a href="">ABOUT</a>
+            </li>
+            <li>
+              <a href="">TABLETS DESCRIPTION</a>
+            </li>
+            <li>
+              <a href="">Diesease DESCRIPTION</a>
+            </li>
+            <li>
+              <a href="">CONTACT</a>
+            </li>
+            <a href="#" name = "signin">
+            <button type="button" id = "signin">sign in</button></a>
+
+
+
+          </ul>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box">
+        <h1>Team Acheivers</h1>
+        <p>Let's educate people with medicines <br> Let's remind people to take medicine</p>
+
+
+      </div>
+
+      <div class="prepare" >
+        <h1 class="preparewithus">Functionalities</h1>
+        <div class = "container">
+          <div class="notes" ><a href="index4.html">
+            <img src="drug.jpg" alt="" id = "notess">
+            <p  color = "black"><b>Medicine and diesease </b><br>KnoW about medicines and there symptoms.</p></a>
+
+          </div>
+          <div class="notes"><a href="index5.html"><img src="notify.jpg" alt="" id = "notess"><p><b>set Notificatin</b><br>Set an remainder.Notification will be come at scheduled time. </p></a></div>
+          <div class="notes" ><a href="index1.html"><img src="alaram.jpg" alt="" id = "notess"><p><b>Set reminder</b><br>set an alarm remainder.alarm will be ring at scheduled time. </p>
+          </a>
+
+
+        </div>
+      </div>
+
+      </div>
+
+
+
+
+    </section>
+
+
+    <script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+      navLinks.style.right="0";
+    }
+    function hideMenu(){
+      navLinks.style.right="-200px";
+    }
+
+    </script>
+
+  </body>
+</html>

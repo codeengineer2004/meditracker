@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Reminder App</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./index5.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <div class="header">
+                <h1>Medicine Reminder App</h1>
+
+                <div class="time" id="currentTime">
+                    <!-- Time will be displayed here -->
+                </div>
+            </div>
+
+            <div class="reminder-input-container">
+                <div class="medicine-name">
+                    <label for="medicineName">Medicine Name:</label>
+                    <input type="text" id="medicineName" placeholder="Enter medicine name">
+                </div>
+                <div class="medicine-dosage">
+                    <label for="medicinedosage">Medicine dosage:</label>
+                    <input type="integer" id="medicineName" placeholder="Enter medicine dosage in mg">
+                </div>
+
+
+                <div class="time-reminder">
+                    <label for="reminderTime">Reminder Time:</label>
+                    <input type="time" id="reminderTime">
+                </div>
+
+                <button class="add-reminder-btn" onclick="addReminder()">Add Reminder</button>
+                <form onsubmit="sendEmail(); reset(); return false">
+
+                  <input type="text" id="Name" placeholder="Enter name" required>
+
+                  <input type="email" id="email" placeholder="Enter Email id" required>
+
+
+                  <textarea id="Message" cols="75" placeholder="enter remainder message"></textarea>
+                  <button class="btn" >submit</button>
+                </form>
+            </div>
+            <script src = "https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+            function sendEmail(){
+              Email.send({
+                  Host : "smtp.gmail.com",
+                  Username : "sampatiraomohankumar@gmail.com",
+                  Password : "393FEAE390B265B1A46AEB21E6B22D07C50B",
+                  To : 'mohankumarsampatirao@gmail.com',
+                  From : document.getElementById("email").value,
+                  Subject : "Remainder",
+                  Body : "Message:"+document.getElementById("Message").value
+              }).then(
+              message => alert(message)
+              );
+
+            }
+
+            </script>
+
+
+
+
+            <div class="reminder-container">
+                <ul class="reminder-list" id="reminders">
+                    <!-- Reminders will be added here -->
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script JS -->
+    <script src="./index5.js"></script>
+
+</body>
+</html>
